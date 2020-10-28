@@ -31,6 +31,10 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+
+}
+
+.cross:hover .overlay {
     animation:spin 4s linear infinite;
 }
 
@@ -65,3 +69,55 @@
 }*/
 
 @keyframes spin { 100% { -webkit-transform: translate(-50%, -50%) rotate(360deg); transform: translate(-50%, -50%) rotate(360deg); } }
+
+/* ABOUT.HTML */
+
+.about {
+    margin-top: 4rem;
+}
+
+.about__img {
+    width: 40%;
+    float: left;
+    border-radius: 10px;
+    margin-right: 2rem;
+    /*object-fit: cover*/
+}
+
+.about__text {
+    text-align: center;
+}
+
+/* OURGEMS.HTML */
+
+.gems {
+    display: flex;
+    height: 500px;
+    background-color: rgba(0,0,0,.5);
+    transform: skewX(-10deg);
+}
+
+.gem {
+    width: 25%;
+    height: 500px;
+    background-color: rgba(0,0,255,.5);
+    flex: 1;
+    transition: .1s;
+}
+.person1 {
+    background-color: red;
+}
+.person1:hover {
+    flex: 2;
+     background-color: blue;
+}
+.person2:hover {
+    flex: 2;
+}
+.person3:hover {
+    flex: 2;
+}
+.person4:hover {
+    flex: 2;
+}
+
