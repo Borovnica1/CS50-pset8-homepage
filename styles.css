@@ -1,5 +1,14 @@
+:root {
+  --main-bg-color: #fbfbfb;
+}
+
+body {
+    background-color: var(--main-bg-color);
+}
+
 .container {
     margin-top: 1rem;
+    background-color: inherit;
 }
 
 .menu__logo {
@@ -24,30 +33,30 @@
 .overlay {
     width: 100px;
     height: 100px;
-    background-color: transparent;
+    background-color: inherit;
     border-radius: 50%;
-    border: 2px solid #000;
+animation:spin 4s linear infinite;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-
 }
 
 .cross:hover .overlay {
-    animation:spin 4s linear infinite;
+
+    border: 2px solid #000;
 }
 
 .overlay::before {
     background: none;
-  border: 10px solid #fff;
+  border: 10px solid var(--main-bg-color);
   content: "";
   display: block;
   position: absolute;
-  top: 4px;
-  left: 4px;
-  right: 4px;
-  bottom: 4px;
+  top: 6px;
+  left: 6px;
+  right: 6px;
+  bottom: 6px;
   pointer-events: none;
 }
 /*
@@ -93,31 +102,101 @@
 .gems {
     display: flex;
     height: 500px;
-    background-color: rgba(0,0,0,.5);
+    background-color: rgba(0,0,0,0.5);
     transform: skewX(-10deg);
+    overflow: hidden;
+    margin-top:  2rem;
 }
 
 .gem {
-    width: 25%;
+    width: 35%;
     height: 500px;
-    background-color: rgba(0,0,255,.5);
+    background-color: rgba(0,0,255,0.5);
     flex: 1;
     transition: .1s;
+    cursor: pointer;
+    border: 2px solid #000;
 }
 .person1 {
-    background-color: red;
+    background:linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(img/mark.png);
+    background-size: cover;
+    background-position: center;
+}
+.person2 {
+    background:linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(img/conan-obrien.png);
+    background-size: cover;
+    background-position: center;
+}
+.person3 {
+    background:linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(img/lilpump.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.person4 {
+    background:linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(img/david.jpg);
+    background-size: cover;
+    background-position: center;
 }
 .person1:hover {
-    flex: 2;
-     background-color: blue;
+    flex: 1.5;
+    background:linear-gradient(0deg, rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0)), url(img/mark.png);
+    background-size: cover;
+    background-position: center;
 }
 .person2:hover {
-    flex: 2;
+    flex: 1.5;
+    background:linear-gradient(0deg, rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0)), url(img/conan-obrien.png);
+    background-size: cover;
+    background-position: center;
 }
 .person3:hover {
-    flex: 2;
+    flex: 1.5;
+    background:linear-gradient(0deg, rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0)), url(img/lilpump.jpg);
+    background-size: cover;
+    background-position: center;
 }
 .person4:hover {
-    flex: 2;
+    flex: 1.5;
+    background:linear-gradient(0deg, rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0)), url(img/david.jpg);
+    background-size: cover;
+    background-position: center;
 }
 
+
+
+.gem__name {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.gem__img {
+    border-radius: 10px;
+    width: 50%;
+}
+
+.gem__div {
+    margin-top: 4rem;
+    background-color: inherit;
+}
+
+.mark__content, .lilpump__content {
+    display: flex;
+    flex-direction: row;
+}
+
+.conan__content, .david__content {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.gem__text {
+    padding: 2rem;
+    column-count: 2;
+}
+
+.gem__div:last-child {
+    margin-bottom: 4rem;
+}
+
+
+/* kod lila daj muziku i interval da rokaju boje!!! */
